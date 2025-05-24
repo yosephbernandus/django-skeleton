@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sample HTML Page</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Sample HTML Page</h1>
+		<p>This is sample html page</p>
+		<p>Welcome to our Django application. This page demonstrates basic HTML, CSS, and JavaScript
+			integration.</p>
+
+		<button id="clickBtn">Click Me</button>
+		<p id="message"></p>
+	</div>
+
+	<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
