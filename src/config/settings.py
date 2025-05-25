@@ -18,6 +18,7 @@ from django.conf import settings
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 import os
+
 import environ
 
 env = environ.Env(
@@ -277,3 +278,36 @@ CELERY_ACCEPT_CONTENT = ["json", "application/text"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = TIME_ZONE
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_RENDERER_CLASSES": [
+        "rest_framework.renderers.JSONRenderer",
+    ],
+}
+
+if DEBUG:
+    INSTALLED_APPS.append("drf_spectacular")
+
+    REST_FRAMEWORK.update(
+        {
+            "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+        }
+    )
+
+    REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"].append(
+        "rest_framework.renderers.BrowsableAPIRenderer"
+    )
+
+    # Spectacular settings
+    SPECTACULAR_SETTINGS = {
+        "TITLE": "Your API",
+        "DESCRIPTION": "Your project API documentation",
+        "VERSION": "1.0.0",
+        "SERVE_INCLUDE_SCHEMA": False,
+        "SWAGGER_UI_SETTINGS": {
+            "deepLinking": True,
+            "persistAuthorization": True,
+            "displayOperationId": True,
+        },
+    }

@@ -1,0 +1,42 @@
+name: Code Quality Check
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    name: python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+      
+      - name: "Install Dependencies"
+        run: |
+          uv venv
+          source .venv/bin/activate
+          uv sync
+          # uv pip install -e .
+          # uv pip install ruff mypy
+          
+      - name: Run Ruff Format
+        run: |
+          source .venv/bin/activate
+          python -m ruff check src/ --fix --config pyproject.toml --select I
+          python -m ruff format src/
+
+      - name: Run Mypy Check
+        run: |
+          source .venv/bin/activate
+          python -m mypy src/ --config-file mypy.ini
+

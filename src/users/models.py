@@ -8,8 +8,8 @@ class User(models.Model):
     password = models.CharField(max_length=128)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.username
+    def __str__(self) -> str:
+        return str(self.username)
 
 
 class Post(models.Model):
@@ -18,5 +18,5 @@ class Post(models.Model):
     author = models.ForeignKey(User, related_name="posts", on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.title
+    def __str__(self) -> str:
+        return str(self.title)

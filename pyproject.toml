@@ -17,6 +17,7 @@ dependencies = [
     "django-redis>=5.4.0",
     "django-stubs>=5.2.0",
     "djangorestframework>=3.16.0",
+    "drf-spectacular>=0.28.0",
     "factory-boy>=3.3.3",
     "ipython>=9.2.0",
     "mypy>=1.15.0",
@@ -50,4 +51,4 @@ skip-magic-trailing-comma = false
 plugins = ["mypy_django_plugin.main"]
 
 [tool.django-stubs]
-django_settings_module = "src.settings.base"
+django_settings_module = "src.config.settings"
