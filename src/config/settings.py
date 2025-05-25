@@ -253,7 +253,7 @@ CACHES = {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "PASSWORD": REDIS_PASSWORD,
         },
-        "KEY_PREFIX": "aegis-service",
+        "KEY_PREFIX": "django-skeleton",
     }
 }
 REDIS_CACHEOPS_HOST = env("REDIS_CACHEOPS_HOST")
