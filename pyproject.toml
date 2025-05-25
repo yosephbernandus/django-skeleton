@@ -29,8 +29,6 @@ dependencies = [
     "ruff>=0.11.11",
 ]
 
-
-# TODO:: add this on bash script
 [tool.ruff]
 lint.select = ["I"]  # Enable all imported rules
 line-length = 100
