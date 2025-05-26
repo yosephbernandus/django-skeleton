@@ -171,7 +171,7 @@ pre-commit run mypy
 - **Django Extensions** - Enhanced management commands
 - **Debug Toolbar** - Development debugging (when enabled)
 
-### Development Tools
+### Background Tasks
 - **Celery** - `celery -A src.config.settings_celery worker -l info -Q default`
 
 ## Deployment
