@@ -190,3 +190,9 @@ pre-commit run mypy
    ```bash
    uv run python src/manage.py migrate
    ```
+
+4. **Run Django with the datadog**
+   ```bash
+   uv run ddtrace-run src/manage.py runserver
+   ```
+
