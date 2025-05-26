@@ -35,33 +35,33 @@ my-project/
 ├── .env.example                  # Environment template
 ├── pyproject.toml               # Project configuration
 ├── uv.lock                      # Dependency lock file
-├── src/                         # Django source code
-│   ├── manage.py               # Django management script
-│   ├── config/                 # Project configuration
-│   │   ├── settings.py         # Django settings
-│   │   ├── settings_celery.py  # Celery configuration
-│   │   ├── urls.py             # URL routing
-│   │   ├── wsgi.py             # WSGI application
-│   │   └── asgi.py             # ASGI application
-│   ├── core/                   # Core utilities
-│   │   ├── exceptions.py
-│   │   ├── utils.py
-│   │   └── validators.py
-│   ├── users/                   # Example Django app module
-│   │   ├── models.py
-│   │   ├── views.py
-│   │   ├── urls.py
-│   │   ├── admin.py
-│   │   └── tests.py
-├── static/                     # Static files (source)
-│   ├── css/
-│   └── js/
-├── templates/                  # HTML templates
-│   └── users/
-├── staticfiles/               # Collected static files (auto-generated)
-└── logs/                      # Application logs
-    ├── requests.log           # HTTP requests
-    └── app.log               # Application logs
+├── logs/                        # Application logs
+│   ├── requests.log            # HTTP requests
+│   └── app.log                 # Application logs
+└── src/                        # Django source code
+    ├── manage.py               # Django management script
+    ├── config/                 # Project configuration
+    │   ├── settings.py         # Django settings
+    │   ├── settings_celery.py  # Celery configuration
+    │   ├── urls.py             # URL routing
+    │   ├── wsgi.py             # WSGI application
+    │   └── asgi.py             # ASGI application
+    ├── core/                   # Core utilities
+    │   ├── exceptions.py
+    │   ├── utils.py
+    │   └── validators.py
+    ├── users/                  # Example Django app module
+    │   ├── models.py
+    │   ├── views.py
+    │   ├── urls.py
+    │   ├── admin.py
+    │   └── tests.py
+    ├── static/                 # Static files (source)
+    │   ├── css/
+    │   └── js/
+    ├── templates/              # HTML templates
+    │   └── users/
+    └── staticfiles/           # Collected static files (auto-generated)
 ```
 
 ## Configuration
