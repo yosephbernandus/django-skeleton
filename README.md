@@ -57,7 +57,7 @@ my-project/
 │   ├── css/
 │   └── js/
 ├── templates/                  # HTML templates
-│   └── crud/
+│   └── users/
 ├── staticfiles/               # Collected static files (auto-generated)
 └── logs/                      # Application logs
     ├── requests.log           # HTTP requests
