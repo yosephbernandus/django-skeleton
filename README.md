@@ -148,34 +148,6 @@ uv run mypy . or ./run-mypy
 uv run ruff check . && uv run ruff format . && uv run mypy .
 ```
 
-```pre-commit
-# Pre Commit install
-pre-commit install
-
-# Run Format And Lint check and fix
-pre-commit run ruff
-
-# Run checking type with mypy
-pre-commit run mypy
-```
-
-## Features
-
-### API Features
-- **Django REST Framework** - Full API support
-- **CORS Headers** - Cross-origin request handling
-- **Health Check Endpoint** - `/api/health/`
-- **Interactive API Documentation** - Available in development
-
-### Development Tools
-- **Django Extensions** - Enhanced management commands
-- **Debug Toolbar** - Development debugging (when enabled)
-
-### Background Tasks
-- **Celery** - `celery -A src.config.settings_celery worker -l info -Q default`
-
-## Development
-
 ### Setup
 
 1. **Environment Variables**
@@ -198,4 +170,31 @@ pre-commit run mypy
    ```bash
    uv run ddtrace-run src/manage.py runserver
    ```
+
+### Pre-Commit Hooks
+```
+# Pre Commit install
+pre-commit install
+
+# Run Format And Lint check and fix
+pre-commit run ruff
+
+# Run checking type with mypy
+pre-commit run mypy
+```
+
+## Features
+
+### API Features
+- **Django REST Framework** - Full API support
+- **CORS Headers** - Cross-origin request handling
+- **Health Check Endpoint** - `/api/health/`
+- **Interactive API Documentation** - Available in development swagger integration `api/docs/`
+
+### Development Tools
+- **Django Extensions** - Enhanced management commands
+- **Debug Toolbar** - Development debugging (when enabled)
+
+### Background Tasks
+- **Celery** - `celery -A src.config.settings_celery worker -l info -Q default`
 
