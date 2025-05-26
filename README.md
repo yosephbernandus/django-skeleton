@@ -174,9 +174,9 @@ pre-commit run mypy
 ### Background Tasks
 - **Celery** - `celery -A src.config.settings_celery worker -l info -Q default`
 
-## Deployment
+## Development
 
-### Production Setup
+### Setup
 
 1. **Environment Variables**
    ```bash
