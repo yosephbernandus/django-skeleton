@@ -159,12 +159,6 @@ pre-commit run ruff
 pre-commit run mypy
 ```
 
-
-```bash
-## Celery Run
-celery -A src.config.settings_celery worker -l info -Q default
-```
-
 ## Features
 
 ### API Features
@@ -176,6 +170,9 @@ celery -A src.config.settings_celery worker -l info -Q default
 ### Development Tools
 - **Django Extensions** - Enhanced management commands
 - **Debug Toolbar** - Development debugging (when enabled)
+
+### Development Tools
+- **Celery** - `celery -A src.config.settings_celery worker -l info -Q default`
 
 ## Deployment
 
