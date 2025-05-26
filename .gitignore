@@ -32,6 +32,5 @@ result
 result-*
 
 # others
-upload_async_state/*
 logs
 staticfiles/
